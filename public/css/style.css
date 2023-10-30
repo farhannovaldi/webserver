@@ -1,7 +1,7 @@
 body {
     color: #333333;
     font-family: Arial, sans-serif;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 16px;
     display: flex;
@@ -178,4 +178,58 @@ footer:hover {
 
 .berita-item a:hover {
     color: #1bfff4;
+}
+
+select {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #46c0ba;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    background: #46c0ba;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+#country-info {
+    margin-top: 50px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#country-info h2 {
+    color: #46c0ba;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+#country-info p {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#flag {
+    max-width: 100%;
+    border: 2px solid #46c0ba;
+    border-radius: 10px;
+}
+#country-form {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Tambahkan margin-bottom untuk memberi jarak antara form dan informasi negara */
+}
+#country-form button:hover {
+    background-color: #1bfff4;
 }

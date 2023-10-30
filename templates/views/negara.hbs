@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{judul}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <form id="country-form">
+            <select id="country" required>
+                <option value="">Pilih negara disini</option>
+            </select>
+            <button type="submit">Cari</button>
+        </form>
+        <div id="country-info">
+            <h2>Informasi Negara:</h2>
+            <p>Nama Negara: <span id="country-name"></span></p>
+            <p>Ibukota: <span id="capital"></span></p>
+            <p>Penduduk: <span id="population"></span></p>
+            <p>Wilayah: <span id="area"></span> km<sup>2</sup></p>
+            <p>Bendera: <img id="flag" width="100"></p>
+        </div>
+        {{>footer}}
+        <script src="/js/app2.js"></script>
+    </div>
+
+</body>
+
+</html>

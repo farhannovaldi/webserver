@@ -29,6 +29,14 @@ res.render('index', {
 })
 })
 
+//ini halaman negara
+app.get('/negara', (req, res) => {
+res.render('negara', {
+    judul: 'Data Data Negara',
+    nama: 'Farhan Novaldi'
+})
+})
+
 //ini halaman bantuan
 app.get('/bantuan', (req, res) => {
     res.render('bantuan', {
