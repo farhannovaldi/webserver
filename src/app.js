@@ -33,7 +33,7 @@ res.render('index', {
 app.get('/bantuan', (req, res) => {
     res.render('bantuan', {
     judul: 'Halaman Bantuan',
-    nama: 'Farhan Nvl',
+    nama: 'Farhan Novaldi',
     teksBantuan: 'Ini adalah teks bantuan'
     })
 })
