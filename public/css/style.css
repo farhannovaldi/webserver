@@ -83,11 +83,19 @@ button {
 }
 
 footer {
+    background-color: transparent;
     color: gold;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
     border-top: 1px solid #eeeeee;
     margin-top: 16px;
     padding: 16px 0;
 }
+
+footer:hover {
+    background-color: #000000; /* Warna latar belakang berubah ketika elemen dihover */
+}
+
 
 .content-wrapper {
     display: flex;
