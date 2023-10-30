@@ -26,6 +26,7 @@ h1 {
 
 header a {
     color: #fff;
+    font-size: 24px;
     text-decoration: none;
     margin: 0 25px;
     transition: box-shadow 0.15s;
@@ -91,6 +92,13 @@ footer {
     justify-content: center; 
 }
 
+.content-wrapper h2{
+    color: #46c0ba;
+    font-size: 22px;
+    margin-top: 2;
+    text-align: right;
+}
+
 .faq {
     background-color: rgba(255, 255, 255, 0.1); 
     padding: 20px;
@@ -102,13 +110,13 @@ footer {
 
 .faq h2 {
     color: #46c0ba;
-    font-size: 28px;
+    font-size: 22px;
     margin-top: 0;
 }
 
 .faq h3 {
     color: #fff;
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 20px;
 }
 
@@ -123,7 +131,8 @@ footer {
     border: 2px solid #46c0ba;
     border-radius: 10px;
 }
-/* Tambahan CSS untuk halaman berita */
+
+
 .berita-list {
     display: flex;
     flex-direction: column;
@@ -136,10 +145,12 @@ footer {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.berita-item h2{
+    font-size: 22px;
+}
 .berita-item h3 {
     color: #46c0ba;
-    font-size: 24px;
+    font-size: 20x;
     margin: 0;
     margin-bottom: 10px;
 }
@@ -157,6 +168,7 @@ footer {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    font-size: 18px;
 }
 
 .berita-item a:hover {
@@ -164,6 +176,6 @@ footer {
 }
 h2 {
     color: #46c0ba;
-    font-size: 28px;
-    margin-top: 0;
+    font-size: 22px;
+    margin-top: 2;
 }
