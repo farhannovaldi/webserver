@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-    <title>Halaman Tentang</title>
-    <link rel="icon" href="/img/imgg.png">
+    <title>{{judul}}</title>
+    <link rel="icon" href="/img/logo.png">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <div class="main-content">
         {{>header}}
-        <img class="potrait" src="/img/hi.png">
+        <div class="content-wrapper">
+            <img class="portrait" src="img/me.png" alt="Foto Profil">
+            <div class="bio">
+                <p>Nama : {{nama}}</p>
+                <p>Alamat : {{alamat}}</p>
+                <p>Telepon : {{telepon}}</p>
+                <p>Email : {{email}}</p>
+                <p>Pendidikan : {{pendidikan.[0].prodi}} di {{pendidikan.[0].institusi}}</p>
+                <p>NIM : {{nim}}</p>
+                <p>Keterampilan : {{#each keterampilan}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+                <p>Sertifikat : {{#each sertifikat}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+            </div>
+        </div>
     </div>
     {{>footer}}
 </body>

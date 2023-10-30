@@ -3,6 +3,8 @@ const path = require('path')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/prediksiCuaca')
+const axios = require('axios');
+
 
 const app = express()
 
@@ -63,11 +65,53 @@ location } = {}) => {
 
 //ini halaman tentang
 app.get('/tentang', (req, res) => {
-res.render('tentang', {
-    judul: 'Tentang Saya',
-    nama: 'Farhan Novaldi'
+    res.render('tentang', {
+        judul: 'About Me',
+        nama: 'Farhan Novaldi',
+        alamat: 'Pematangsiantar, Sumatera Utara',
+        telepon: '0895629380521',
+        email: 'farhannovaldi002@gmail.com',
+        pendidikan: [
+            {
+                institusi: 'Universitas Negeri Padang',
+                prodi: 'Informatika',
+            }
+        ],
+        nim : '21343024',
+        keterampilan: ['HTML', 'CSS', 'JavaScript', 'Node.js'],
+        sertifikat: ['Sertifikat Pelatihan Databese Foundation'],
+    })
 })
-})
+
+// ini halaman berita
+app.get('/berita', async (req, res) => {
+    try {
+        const urlApiMediaStack = 'http://api.mediastack.com/v1/news';
+        const apiKey = 'be42ff6447147e92b2cbca5e7952df12';
+
+        const params = {
+            access_key: apiKey,
+            countries: 'id', 
+        };
+
+        const response = await axios.get(urlApiMediaStack, { params });
+        const dataBerita = response.data;
+
+        res.render('berita', {
+            nama: 'Farhan Novaldi',
+            judul: 'Laman Berita',
+            berita: dataBerita.data,
+        });
+    } catch (error) {
+        console.error(error);
+        res.render('error', {
+            judul: 'Terjadi Kesalahan',
+            pesanKesalahan: 'Terjadi kesalahan saat mengambil berita.',
+        });
+    }
+});
+
+
 
 app.get('/bantuan/*',(req,res)=>{
     res.render('404',{
