@@ -1,7 +1,7 @@
 body {
     color: #333333;
     font-family: Arial, sans-serif;
-    max-width: 800px;
+    max-width: 770px;
     margin: 0 auto;
     padding: 0 16px;
     display: flex;
@@ -191,6 +191,16 @@ footer:hover {
 .berita-item a:hover {
     color: #1bfff4;
 }
+/* .berita-item img */
+.berita-item img {
+    max-width: 100%;
+    height: auto; 
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /
+}
+
 
 select {
     flex: 1;
