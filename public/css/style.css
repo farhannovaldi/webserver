@@ -36,8 +36,20 @@ header a {
     transition: box-shadow 0.15s;
 }
 
-header a:active {
-    box-shadow: 0 0 5px 2px #1bfff4;
+header a.active {
+    background-color: rgb(64, 239, 230); 
+    color: #fff;
+    font-weight: bold; 
+    border-radius: 5px;
+    padding: 5px 15px; 
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+header a:hover {
+    background-color: #333; 
+    color: #1bfff4; 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 p {
